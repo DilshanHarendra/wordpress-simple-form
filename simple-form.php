@@ -25,6 +25,8 @@ class SimpleForm
     public function __construct()
     {
         add_action('init',array($this,'create_custom_form'));
+
+        add_action('wp_enqueue_scripts',array($this,'load_assets'));
     }
 
     public function create_custom_form()
@@ -45,6 +47,17 @@ class SimpleForm
 
         register_post_type('simple-form',$args);
     }
+
+
+
+    public function load_assets(){
+        wp_enqueue_style('simple-form',plugin_dir_url(__FILE__).'/css/simple-form.css',array(),1,'all');
+
+        wp_enqueue_script('simple-form',plugin_dir_url(__FILE__).'/js/simple-form.js',array(),1,true);
+
+    }
+
+
 }
 
 new SimpleForm;
