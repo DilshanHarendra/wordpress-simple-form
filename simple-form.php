@@ -2,7 +2,7 @@
 /**
  * Plugin Name: simple-form
  * Plugin URI: https://github.com/DilshanHarendra/wordpress-simple-form
- * Description: This is a test plugin
+ * Description: This is a test form plugin
  * Author: Dilshan
  * Author URI: https://github.com/DilshanHarendra
  * Version: 1.0.0
